@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename='img/home-bg.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1 style="color:green;">{{params['blog_title']}}</h1>
+            <span class="subheading">A Blog liked by Coders</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  {% for post in posts %}
+    <a href="/post/{{ post.slug }}">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+          <a href="/post/{{post.slug}}">
+            <h2 class="post-title">
+              {{ post.title }}
+            </h2>
+            <h3 class="post-subtitle">
+              {{post.tagline}}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">Admin</a>
+            {{post.date}}</p>
+            {{ post.content[0:150] }}...
+        </div>
+        </div>
+        </div>
+        </div>
+        <hr>
+</a>
+      {% endfor %}
+
+        <!-- Pager -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="clearfix">
+          {% if number!=0 %}
+          <a class="btn btn-primary float-left" href="{{prev}}">&larr; Previous </a>
+          {% endif %}
+          <a class="btn btn-primary float-right" href="{{next}}">Next &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  {% endblock %}

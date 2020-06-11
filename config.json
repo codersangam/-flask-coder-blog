@@ -1,0 +1,20 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql+pymysql://root:admin123@localhost/coderblog",
+    "prod_uri": "mysql+pymysql://root:admin123@localhost/coderblog",
+    "blog_title": "Coder Blog",
+    "fb_url": "https://facebook.com/coderblog",
+    "tw_url": "https://twitter.com/coderblog",
+    "gh_url": "https://github.com/coderblog",
+    "gmail_username": "your_gmail_username",
+    "gmail_password": "your_gmail_password",
+    "about_me_text": "Sangam Singh is a Full Stack Developer and an Artificial Intelligence Engineer. He is little bit kind of caring person.",
+    "no_of_posts": 3,
+    "sign_in_image": "sign_in_image.svg",
+    "admin_username": "sangam",
+    "admin_password": "sangam",
+    "upload_location": "//Users//sangam//Projects//PycharmProjects//flask//static//img"
+  }
+}
